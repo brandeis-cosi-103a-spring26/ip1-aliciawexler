@@ -1,13 +1,14 @@
 package edu.brandeis.cosi103a.ip1;
 
 /**
- * Hello world!
- *
+ * Main entry point for the dice game
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        DiceGame game = new DiceGame();
+        
+        game.play();
     }
 }
