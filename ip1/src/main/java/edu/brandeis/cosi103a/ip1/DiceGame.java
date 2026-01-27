@@ -7,16 +7,16 @@ import java.util.Scanner;
  */
 public class DiceGame {
     private static final int TURNS_PER_PLAYER = 10;
-    private Player player1;
-    private Player player2;
+    private Player_d player1;
+    private Player_d player2;
     private Die die;
     private Scanner scanner;
 
     public DiceGame() {
         this.die = new Die();
         this.scanner = new Scanner(System.in);
-        this.player1 = new Player("Player 1");
-        this.player2 = new Player("Player 2");
+        this.player1 = new Player_d("Player 1");
+        this.player2 = new Player_d("Player 2");
     }
 
     public void play() {
@@ -34,7 +34,7 @@ public class DiceGame {
         scanner.close();
     }
 
-    private void playTurn(Player player) {
+    private void playTurn(Player_d player) {
         System.out.println(player.getName() + "'s turn:");
         int rollValue = die.roll();
         System.out.println("Die rolled: " + rollValue);
@@ -78,11 +78,11 @@ public class DiceGame {
         }
     }
 
-    public Player getPlayer1() {
+    public Player_d getPlayer1() {
         return player1;
     }
 
-    public Player getPlayer2() {
+    public Player_d getPlayer2() {
         return player2;
     }
 }
